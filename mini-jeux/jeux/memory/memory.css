@@ -1,0 +1,119 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #ffd6e0, #a0c4ff, #d0f4de);
+  background-size: 600% 600%;
+  animation: gradient 20s ease infinite;
+  margin: 0;
+  padding: 2rem;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.memory-wrapper {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: auto;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 1.5rem auto;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.flipped {
+  background-color: #ffc6ff;
+  animation: flip 0.4s ease forwards;
+}
+
+@keyframes flip {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(180deg); }
+}
+
+#restart {
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: none;
+  background: #ff595e;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#restart:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 0.3rem;
+}
+.card.matched {
+  background-color: #a5e6a1 !important;
+  color: white;
+  cursor: default;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.4);
+  pointer-events: none;
+}
+#back {
+  margin-top: 10px;
+  background-color: #f1c40f;
+  color: #333;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+#back:hover {
+  background-color: #f39c12;
+  transform: scale(1.05);
+}

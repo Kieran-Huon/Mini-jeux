@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pierre-Feuille-Ciseaux</title>
+  <link rel="stylesheet" href="pfc.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🪨 ✂️ 📄 Pierre - Feuille - Ciseaux</h1>
+    <div class="choices">
+      <button data-choice="pierre">🪨 Pierre</button>
+      <button data-choice="feuille">📄 Feuille</button>
+      <button data-choice="ciseaux">✂️ Ciseaux</button>
+    </div>
+    <div class="result">
+      <p id="player-choice">👤 Ton choix : -</p>
+      <p id="computer-choice">🤖 Ordinateur : -</p>
+      <h2 id="outcome">Fais ton choix !</h2>
+    </div>
+    
+    <div class="scoreboard">
+        <p>👤 Toi : <span id="player-score">0</span></p>
+        <p>🤖 Ordi : <span id="computer-score">0</span></p>
+    </div>
+
+    <button id="restart" style="display:none;">🔁 Rejouer</button>
+
+    <a href="../../index.html" class="back">⬅️ Retour</a>
+
+  </div>
+
+  <script src="pfc.js"></script>
+</body>
+</html>

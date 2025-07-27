@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Escape Room 🔐</title>
+  <link rel="stylesheet" href="escape.css" />
+</head>
+<body>
+  <h1>Escape Room 🔐</h1>
+  <div class="room">
+    <div class="object" id="frame">🖼️</div>
+    <div class="object" id="drawer">🗄️</div>
+    <div class="object" id="plant">🪴</div>
+    <div class="door" id="door">🚪</div>
+  </div>
+
+  <div id="message"></div>
+
+  <div id="codePanel" class="hidden">
+    <label>Code : <input type="text" id="codeInput" maxlength="4" /></label>
+    <button onclick="checkCode()">Valider</button>
+  </div>
+
+  <button id="restart" onclick="location.reload()">🔁 Recommencer</button>
+
+  <script src="escape.js"></script>
+</body>
+</html>
